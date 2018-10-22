@@ -1,6 +1,6 @@
 module.exports = function (req, res, next) {
 
-    var token;
+    let token;
 
     if (req.headers && req.headers.authorization) {
       var parts = req.headers.authorization.split(' ')

@@ -11,7 +11,7 @@ module.exports.issue = function(payload) {
   );
 };
 
-module.exports.verify = function(token) {
+module.exports.verify = function(token, next) {
   return jwt.verify(
     token,
     tokenSecret,
