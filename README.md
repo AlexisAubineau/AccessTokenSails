@@ -1,27 +1,35 @@
-# test-project
-
-a [Sails v1](https://sailsjs.com) application
 
 
-### Links
+# Access token sails
 
-+ [Get started](https://sailsjs.com/get-started)
-+ [Sails framework documentation](https://sailsjs.com/documentation)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
+Réalisée lors d'un cours de **Node JS**, cette application a eu pour but d'apprendre à utiliser les **Access token sous sails** pour la création d'une API  _Node JS_.
 
+## Installation 
 
-### Version info
+Cette application nécessite d'avoir nodeJs d'installé.
+```bash
+git clone https://github.com/AlexisAubineau/AccesssTokenSails.git
+npm install 
+node app.js
+```
 
-This app was originally generated on Tue Oct 16 2018 15:04:01 GMT+0200 (CEST) using Sails v1.0.2.
+## Utilisation
 
-<!-- Internally, Sails used [`sails-generate@1.15.28`](https://github.com/balderdashy/sails-generate/tree/v1.15.28/lib/core-generators/new). -->
+### Routes
 
+Voici la liste des routes de l'application.    
 
-
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
-
+| Route | Méthode | Retour |
+| --- | --- | --- |
+| /user/login | POST | Se connecter avec les identifiants |
+| /user/signup | POST | Inscription de l'utilisateur |
+| /restaurants/ | GET | Récupérer tous les restaurants |
+| /restaurant/ | POST | Créer un restaurant |
+| /restaurant/:id | GET | Récupérer un restaurant par son ID |
+| /restaurant/:id | PUT | Update un restaurant par rapport à son ID |
+| /restaurant/:id | DELETE | Supprimer un restaurant par rapport à son ID |
+| /restaurant/:id/employees/ | GET | Récupérer tous les employées associé à un restaurant |
+| /restaurant/:id/employees/ | POST | Créer un employée associé à un restaurant |
+| /restaurant/:id/employees/:id | GET | Récupérer un employée associé à un restaurant par rapport à son ID |
+| /restaurant/:id/employees/:id | PUT | Update un employée par rapport à son ID associé à un restaurant par rapport à son ID |
+| /restaurant/:id/employees/:id | DELETE | Supprimer un employée par rapport à son ID associé à un restaurant par rapport à son ID |
